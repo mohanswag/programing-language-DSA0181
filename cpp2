@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class R192210061 {
+public:
+    void reverseArray(int arr[], int size) {
+        int start = 0, end = size - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    void displayArray(int arr[], int size) {
+        for (int i = 0; i < size; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    R192210061 obj;
+    obj.reverseArray(arr, size);
+    obj.displayArray(arr, size);
+    return 0;
+}
