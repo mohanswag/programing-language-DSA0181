@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class R192210061 {
+public:
+    void findMaxMin(int arr[], int size) {
+        int max = arr[0];
+        int min = arr[0];
+        for (int i = 1; i < size; i++) {
+            if (arr[i] > max) max = arr[i];
+            if (arr[i] < min) min = arr[i];
+        }
+        cout << "Maximum: " << max << endl;
+        cout << "Minimum: " << min << endl;
+    }
+};
+
+int main() {
+    int arr[] = {12, 45, 3, 19, 8};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    R192210061 obj;
+    obj.findMaxMin(arr, size);
+    return 0;
+}
