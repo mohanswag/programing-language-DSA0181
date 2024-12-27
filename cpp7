@@ -1,0 +1,25 @@
+#include <unordered_map>
+using namespace std;
+
+class R192210061 {
+public:
+    void countFrequency(int arr[], int size) {
+        unordered_map<int, int> freqMap;
+
+        for (int i = 0; i < size; i++) {
+            freqMap[arr[i]]++;
+        }
+
+        for (auto& pair : freqMap) {
+            cout << "Element " << pair.first << " appears " << pair.second << " times." << endl;
+        }
+    }
+};
+
+int main() {
+    int arr[] = {10, 20, 10, 30, 20, 10};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    R192210061 obj;
+    obj.countFrequency(arr, size);
+    return 0;
+}
